@@ -14,4 +14,3 @@ def send_gmail(sender, reciever, token, subject, body):
 
         smtp.sendmail(sender, reciever, message)
 
-
