@@ -33,11 +33,13 @@ while True:
 
     if price < 6390.0:
         gmail.send_gmail(sender, reciever, token, subject, price_lower)
+        gmail.send_gmail(sender, sender, token, subject, price_lower)
         sleep(86400)
     elif price == 6390.0  and datetime.date.today().weekday() == 0:
         gmail.send_gmail(sender, reciever, token, subject, price_same)
         sleep(86400)
     else:
+        gmail.send_gmail(sender, sender, token, subject, price_lower)
         sleep(3600)
 
 
