@@ -9,7 +9,6 @@ import os
 web_link = requests.get('https://www.komplett.no/product/1168752/datautstyr/pc-komponenter/skjermkort/asus-geforce-rtx-3070-dual').text
 price = web.scrape_web(source=web_link, parser='html.parser')
 
-# Gmail variable things
 today = datetime.date.today()
 
 sender = "flovildmidtlielinus@gmail.com"
