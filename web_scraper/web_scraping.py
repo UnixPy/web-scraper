@@ -5,8 +5,7 @@ def scrape_web(source, parser):
 
     soup = BeautifulSoup(source, parser)
 
-    price = soup.find('div', class_='product-price').get('content')
+    price = soup.find('meta', itemprop='price')
+    price = int(price['content'].split('.')[0])
 
     return price
-
-

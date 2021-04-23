@@ -6,7 +6,7 @@ import datetime
 import os
 
 
-web_link = requests.get('https://www.komplett.no/product/1168752/datautstyr/pc-komponenter/skjermkort/asus-geforce-rtx-3070-dual').text
+web_link = requests.get('https://www.komplett.no/product/1174395/datautstyr/pc-komponenter/skjermkort/palit-geforce-rtx-3060-ti-gamingpro').text
 price = web.scrape_web(source=web_link, parser='html.parser')
 
 today = datetime.date.today()
@@ -29,15 +29,13 @@ while True:
     web_link = requests.get('https://www.komplett.no/product/1174395/datautstyr/pc-komponenter/skjermkort/palit-geforce-rtx-3060-ti-gamingpro').text
     price = web.scrape_web(source=web_link, parser='html.parser')
 
-    price = float(price)
-
     print(price)
 
-    if price < 6390.0:
+    if price < 5690:
         gmail.send_gmail(sender, reciever, token, subject, price_lower)
         gmail.send_gmail(sender, sender, token, subject, price_lower)
         sleep(86400)
-    elif price == 6390.0  and datetime.date.today().weekday() == 0:
+    elif price == 5690 and datetime.date.today().weekday() == 0:
         gmail.send_gmail(sender, reciever, token, subject, price_same)
         gmail.send_gmail(sender, sender, token, subject, price_same)
         sleep(86400)
