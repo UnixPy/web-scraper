@@ -13,15 +13,15 @@ today = datetime.date.today()
 
 
 sender = "flovildmidtlielinus@gmail.com" # my gmail
-reciever = os.environ.get('KETIL_GMAIL')
+reciever = sender
 
 token = os.environ.get('GMAIL_APP_CODE') # password for gmail account
 
 subject = "Web Scraper Status!"
 
-price_lower = f"This message was sent using an automated python module. The date of which this gmail was sent is {today}. The price of the rtx 3060 ti is: {price} The price of the rtx 3060 ti has dropped since the last gmail! If the rtx 3060 ti is still on sale the next day, another gmail will be recieved.\n\nsincerely WEB_BOT()"
+price_lower = f"This message was sent using an automated python module. The date of which this gmail was sent is {today}. The price of the rtx 3060 ti is: {price}kr The price of the rtx 3060 ti has dropped since the last gmail! If the rtx 3060 ti is still on sale the next day, another gmail will be recieved.\n\nsincerely WEB_BOT()"
 
-price_same = f"This message was sent using an automated python module. The date of which this gmail was sent is {today}. The current price of the rtx 3060 ti is: {price} The price has not changed since last gmail.\n\nIf the price of the rtx 3060 ti stays the same until monday, another gmail will be recieved.\n\nsincerely WEB_BOT()"
+price_same = f"This message was sent using an automated python module. The date of which this gmail was sent is {today}. The current price of the rtx 3060 ti is: {price}kr The price has not changed since last gmail.\n\nIf the price of the rtx 3060 ti stays the same until monday, another gmail will be recieved.\n\nsincerely WEB_BOT()"
 
 
 while True:
